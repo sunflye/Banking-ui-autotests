@@ -123,3 +123,7 @@
 
 9. **Приоритет (Priority):**
     - Средний
+
+### Allure-отчёт
+
+![Allure report example](docs/image.png)
