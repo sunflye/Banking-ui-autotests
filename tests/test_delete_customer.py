@@ -5,7 +5,10 @@ from waits import Waits
 URL = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager"
 
 
-def test_delete_customer(browser):
+def test_delete_customer(browser) -> None:
+    """
+    Тест на удаление клиента с именем, длина которого ближе всего к среднему значению.
+    """
     page = CustomersPage(browser)
     page.open(URL)
     page.go_to_customers_tab()

@@ -8,10 +8,16 @@ URL = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager"
 
 
 def generate_post_code() -> str:
+    """
+    Генерирует случайный код из 10 цифр.
+    """
     return "".join(random.choices(string.digits, k=10))
 
 
 def post_code_to_first_name(post_code: str) -> str:
+    """
+    Преобразует  код в строку, которую можно использовать как имя.
+    """
     first_name = ""
     for i in range(0, 10, 2):
         pair = int(post_code[i : i + 2])
@@ -20,7 +26,10 @@ def post_code_to_first_name(post_code: str) -> str:
     return first_name
 
 
-def test_add_customer(browser):
+def test_add_customer(browser) -> None:
+    """
+    Тест на добавление клиента и проверку его наличия в таблице клиентов.
+    """
     post_code = generate_post_code()
     first_name = post_code_to_first_name(post_code)
     add_page = AddCustomerPage(browser)

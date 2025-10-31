@@ -4,7 +4,10 @@ from waits import Waits
 URL = "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager"
 
 
-def test_sort_customers(browser):
+def test_sort_customers(browser) -> None:
+    """
+    Тест на сортировку клиентов по имени в таблице.
+    """
     page = CustomersPage(browser)
     page.open(URL)
     page.go_to_customers_tab()

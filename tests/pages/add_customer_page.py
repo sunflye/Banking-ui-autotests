@@ -4,22 +4,39 @@ from waits import Waits
 
 
 class AddCustomerPage:
+    """
+    Page Object для страницы добавления клиента.
+    Инкапсулирует работу с формой "Add Customer".
+    """
+
     ADD_CUSTOMER_BTN = (By.CSS_SELECTOR, 'button[ng-class="btnClass1"]')
     FIRST_NAME_INPUT = (By.CSS_SELECTOR, "input[ng-model='fName']")
     LAST_NAME_INPUT = (By.CSS_SELECTOR, "input[ng-model='lName']")
     POST_CODE_INPUT = (By.CSS_SELECTOR, "input[ng-model='postCd']")
     SUBMIT_BTN = (By.CSS_SELECTOR, "button[type='submit']")
 
-    def __init__(self, browser):
+    def __init__(self, browser) -> None:
+        """
+        Инициализация страницы добавления клиента.
+        """
         self.browser = browser
 
-    def open(self, url):
+    def open(self, url) -> None:
+        """
+        Открывает указанный URL в браузере.
+        """
         self.browser.get(url)
 
-    def go_to_add_customer_tab(self):
+    def go_to_add_customer_tab(self) -> None:
+        """
+        Переходит на вкладку добавления клиента.
+        """
         self.browser.find_element(*self.ADD_CUSTOMER_BTN).click()
 
-    def add_customer(self, first_name, last_name, post_code):
+    def add_customer(self, first_name, last_name, post_code) -> None:
+        """ "
+        Заполняет форму и добавляет нового клиента.
+        """
         self.go_to_add_customer_tab()
         self.browser.find_element(*self.FIRST_NAME_INPUT).send_keys(first_name)
         self.browser.find_element(*self.LAST_NAME_INPUT).send_keys(last_name)
