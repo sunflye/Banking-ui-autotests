@@ -126,4 +126,4 @@
 
 ### Allure-отчёт
 
-![Allure report example](docs/image.png)
+![Allure report example](docs/report1.png)
