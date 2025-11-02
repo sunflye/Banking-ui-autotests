@@ -1,12 +1,17 @@
+import sys
+import os
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
 @pytest.fixture
 def browser():
     """
-    Фикстура для инициализации браузера Chrome в headless-режиме с настройками для CI/CD.
+    Фикстура для инициализации браузера Chrome.
     """
     options = Options()
     options.add_argument("--headless=new")
