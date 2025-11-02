@@ -15,7 +15,7 @@ class CustomersPage(BasePage):
     FIRST_NAME_HEADER = (By.XPATH, "//a[contains(text(), 'First Name')]")
     FIRST_NAME_CELL = (By.TAG_NAME, "td")
 
-    @allure.step("Закрытие alert")
+    @allure.step("Переход на вкладку клиентов.")
     def go_to_customers_tab(self) -> None:
         """
         Переходит на вкладку клиентов и ожидает загрузки таблицы.
