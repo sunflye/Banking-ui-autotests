@@ -1,0 +1,40 @@
+# Не коммитить виртуальное окружение
+venv/
+.venv/
+
+# PyCharm, VSCode, и другие IDE
+.idea/
+.vscode/
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ruff cache
+.ruff_cache/
+
+# Pytest cache
+.pytest_cache/
+
+# Логи, временные файлы
+*.log
+*.tmp
+
+# Allure отчёты (если используешь)
+allure-report/
+allure-results/
+
+# Файлы Selenium
+selenium-screenshot-*.png
+
+# Файлы окружения
+.env
+.env.*
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
